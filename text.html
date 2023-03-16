@@ -14,14 +14,16 @@
     <header>
         <div class="icons">
             <i class="fas fa-bars" id="menu"></i>
-            <i class="fas fa-shopping-cart"></i>
+            <i class="fas fa-shopping-cart" style="position: relative;">
+                <span class="selected" id="selected">0</span>
+            </i>
         </div>
         <nav class="navbar">
             <a href="booking .html">الحجوزات</a>
             <div class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
                     aria-expanded="false" style="background-color: transparent; border: none;">
-                    <a href="#">القائمة</a>
+                    <a href="#">قائمة المأكولات</a>
                 </button>
                 <ul class=" dropdown-menu">
                     <li><a class="dropdown-item" href="manu-2.html">أسماك</a></li>
@@ -70,7 +72,7 @@
 
 
     <section class="welcome" id="manu">
-        <h1 class="heading">WELCOM TO ROYATE</h1>
+        <h1 class="heading">WELCOME TO ROYATE</h1>
         <div class="text-center">
             <h3 class="sub-heading"> ~ Luxury & Quality ~ </h3>
         </div>
@@ -83,7 +85,11 @@
 
                 <div class="content">
                     <h3>قسم البيتزا</h3>
-                    <a href="./manu-1.html" class="btnn">اطلب الان </a>
+                    <div class="d-flex justify-content-between">
+                        <button class="shop-btn" id="increase-btn">+</button>
+                        <a href="./manu-1.html" class="btnn">اطلب الان </a>
+                        <button class="shop-btn" id="decrease-btn">-</button>
+                    </div>
                 </div>
             </div>
             <div class="box">
