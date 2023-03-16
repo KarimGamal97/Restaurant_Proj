@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/food.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="icons">
+            <i class="fas fa-bars" id="menu"></i>
+            <i class="fas fa-shopping-cart"></i>
+        </div>
+        <nav class="navbar">
+            <a href="booking .html">الحجوزات</a>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false" style="background-color: transparent; border: none;">
+                    <a href="#">القائمة</a>
+                </button>
+                <ul class=" dropdown-menu">
+                    <li><a class="dropdown-item" href="manu-2.html">أسماك</a></li>
+                    <li><a class="dropdown-item" href="manu-1.html">بيتزا</a></li>
+                    <li><a class="dropdown-item" href="manu-3.html">سندوتشات</a></li>
+                </ul>
+            </div>
+            <a href="about.html">من نحن</a>
+            <a href="text.html" class="active">الصفحه الرئيسيه</a>
+        </nav>
+        <a href="#" class="logo"><img src="navbar/logo.png"></a>
+    </header>
+    <main class="main">
+        <div id="carouselExampleIndicators" class="carousel slide " data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./navbar/post-thumb-1.jpg" class="d-block carousel-img" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="./navbar/post-thumb-3.jpg" class="d-block  carousel-img" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="./navbar/post-thumb-2.jpg" class="d-block  carousel-img" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </main>
+
+
+    <section class="welcome" id="manu">
+        <h1 class="heading">WELCOM TO ROYATE</h1>
+        <div class="text-center">
+            <h3 class="sub-heading"> ~ Luxury & Quality ~ </h3>
+        </div>
+
+        <div class="box-container">
+            <div class="box">
+                <div class="image">
+                    <img src="navbar/6manu-1.jpg">
+                </div>
+
+                <div class="content">
+                    <h3>قسم البيتزا</h3>
+                    <a href="./manu-1.html" class="btnn">اطلب الان </a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="navbar/post-thumb-2.jpg">
+                </div>
+
+                <div class="content">
+                    <h3>قسم الاسماك </h3>
+                    <a href="./manu-2.html" class="btnn">اطلب الان </a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="navbar/post-thumb-3.jpg">
+                </div>
+
+                <div class="content">
+                    <h3>قسم السندوتشات</h3>
+                    <a href="./manu-3.html" class="btnn">اطلب الان</a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <script src="./js/jquery-3.6.4.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

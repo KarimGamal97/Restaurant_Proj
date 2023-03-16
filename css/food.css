@@ -1,0 +1,337 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+
+:root {
+  --black: #333;
+  --light-color: #cdaa7c;
+  --box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  text-transform: capitalize;
+  transition: all 0.2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: var(--black);
+  padding: 1rem 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: var(--box-shadow);
+  z-index: 10000;
+}
+
+/* header .logo img {
+  height: auto;
+} */
+
+header .navbar a {
+  font-size: 1.7rem;
+  padding: 0.5rem 1.5rem;
+  color: var(--light-color);
+  text-decoration: none;
+  border: 0.1rem solid transparent;
+}
+
+header .navbar a.active,
+header .navbar a:hover {
+  color: #fff;
+  border-bottom: 0.1rem solid rgba(205, 170, 124, 0.2);
+}
+header .icons {
+  padding: 10px;
+}
+header .icons i {
+  cursor: pointer;
+  margin-left: 0.5rem;
+  height: 3.5rem;
+  width: 3.5rem;
+  line-height: 3.5rem;
+  background: var(--light-color);
+  text-align: center;
+  font-size: 1.7rem;
+  color: #fff;
+  border-radius: 6px;
+  transition: all 0.7s ease-in-out;
+}
+
+header .icons i:hover {
+  color: #fff;
+  background: var(--light-color);
+  transform: rotate(360deg);
+  border-radius: 50%;
+}
+
+header .icons #menu {
+  display: none;
+}
+
+#carouselExampleIndicators .carousel-item img {
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+}
+
+.btnn {
+  margin-top: 1rem;
+  display: inline-block;
+  font-size: 1.7rem;
+  color: #fff;
+  border: 0.1rem solid rgba(205, 170, 124, 0.2);
+  background: transparent;
+  cursor: pointer;
+  padding: 0.8rem 3rem;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  text-decoration: none;
+  border-radius: 20px;
+}
+.btnn:hover {
+  background-color: var(--black);
+  color: var(--light-color);
+  border: 0.1rem solid #cdaa7c;
+}
+
+.btnn::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: var(--light-color);
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  transition: 0.5s;
+}
+
+.btnn:hover.btn:before {
+  left: 0;
+}
+
+/*welcome style start*/
+section {
+  padding: 8rem 9%;
+  margin: 100px 0 0;
+}
+
+.heading {
+  text-align: center;
+  color: var(--black);
+  font-size: 4.5rem;
+  padding-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+}
+
+.sub-heading {
+  text-align: center;
+  color: var(--light-color);
+  font-size: 2.5rem;
+  padding: 0.5rem 2rem;
+  font-weight: 300;
+  margin-bottom: 4rem;
+  background: var(--black);
+  display: inline-block;
+}
+
+.welcome .box-container {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 100px;
+}
+
+.welcome .box-container .box {
+  width: 33%;
+  background: var(--black);
+  box-shadow: var(--box-shadow);
+  text-align: center;
+  padding-bottom: 1%;
+}
+
+.welcome .box-container .box .image {
+  height: 25rem;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.welcome .box-container .box .image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.welcome .box-container .box .image:hover img {
+  transform: scale(1.1);
+}
+
+.welcome .box-container .box .content {
+  padding: 2rem;
+  padding-top: 2rem;
+}
+
+.welcome .box-container .box .content h3 {
+  color: var(--light-color);
+  font-size: 22px;
+  padding-bottom: 10px;
+}
+
+.welcome .box-container .box .content h4 {
+  color: #e4ddd1;
+  font-size: 22px;
+}
+
+/*slider style end*/
+
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+
+  header {
+    padding: 1rem 2rem;
+  }
+}
+.logo img {
+  width: 100%px;
+}
+@media (max-width: 768px) {
+  header .icons #menu {
+    display: inline-block;
+  }
+
+  header .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #eee;
+    border-top: 0.1rem solid rgba(250, 170, 124, 0.2);
+    border-bottom: 0.1rem solid rgba(250, 170, 124, 0.2);
+    padding: 1rem;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+
+  header .navbar.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  header .navbar a {
+    display: block;
+    padding: 1.5rem;
+    margin: 1rem;
+    font-size: 2rem;
+    background: var(--black);
+  }
+}
+
+.carousel-inner {
+  height: 100%;
+}
+
+@media (max-width: 992px) {
+  .carousel-inner {
+    height: 50%;
+  }
+}
+.carousel-img {
+  width: 100%;
+}
+@media (max-width: 992px) {
+  .carousel-img {
+    width: 100%;
+  }
+}
+
+.reservation {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.reservation .image {
+  width: 55%;
+  background: url(navbnavbar/book-a-table.jpgar);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding-top: 9rem;
+}
+
+.reservation .from {
+  background: #333;
+  width: 100%;
+  padding: 17rem 15%;
+}
+
+.reservation .from h1 {
+  color: #fff;
+}
+
+.reservation .from-holder {
+  display: flex;
+  grid-gap: 3rem;
+  width: 100%;
+}
+
+.reservation .from form input,
+.reservation .from select {
+  display: block;
+  margin: 2rem 0;
+  width: 100%;
+  background: none;
+  border-bottom: 0.1rem solid #b7b3b3;
+  color: #cdaa7c;
+  font-size: 1.8rem;
+  font-weight: 300;
+}
+
+.reservation .from form input:placeholder {
+  color: #b7b3b3;
+}
+
+.reservation .image {
+  width: 0;
+}
+
+.reservation .image {
+  width: 100%;
+}
+
+.reservation .form .from-holder {
+  display: block;
+}
+
+.form-holder {
+  padding: 20px;
+  border: 1px solid #eee;
+  border-radius: 6px;
+}
+.form-holder input,
+.form-holder select {
+  border: 1px solid #eee;
+  padding: 15px;
+  border-radius: 6px;
+}
+.form-holder input::placeholder,
+.form-holder select {
+  text-align: right;
+}
