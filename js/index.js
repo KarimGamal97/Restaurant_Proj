@@ -38,11 +38,7 @@ $(document).ready(function () {
     });
   });
 });
-let user = document.getElementById("user");
-console.log(user);
-user.addEventListener("click", function () {
-  window.location.replace("login.html");
-});
+
 console.log("user");
 // Login Page
 $(".message a").click(function () {
@@ -52,13 +48,16 @@ $(".message a").click(function () {
 let username = document.getElementById("login-name");
 let userpassword = document.getElementById("user-password");
 let loginBtn = document.querySelector("#login-btn");
+function submit() {
+  loginBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+    if (username.value == "admin" && userpassword.value == "12345678") {
+      window.location.replace("admin.html");
+    } else {
+      console.log(username.value);
+      console.log(userpassword.value);
+    }
+  });
+}
 
-loginBtn.addEventListener("click", function (e) {
-  e.preventDefault();
-  if (username.value == "admin" && userpassword.value == "12345678") {
-    window.location.replace("admin.html");
-  } else {
-    console.log(username.value);
-    console.log(userpassword.value);
-  }
-});
+submit();
