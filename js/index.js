@@ -25,15 +25,15 @@
 
 $(document).ready(function () {
   var counts = 0;
-  $("#increase-btn").click(function () {
+  $(".increase-btn").click(function () {
     counts += +1;
-    $("#selected").animate(300, function () {
+    $(".selected").animate(300, function () {
       $(this).text(counts);
     });
   });
-  $("#decrease-btn").click(function () {
+  $(".decrease-btn").click(function () {
     counts -= 1;
-    $("#selected").animate(300, function () {
+    $(".selected").animate(300, function () {
       $(this).text(counts);
     });
   });
@@ -49,7 +49,11 @@ let userpassword = document.getElementById("user-password");
 let loginBtn = document.querySelector("#login-btn");
 
 loginBtn.addEventListener("click", function (e) {
-  console.log(username.value);
-  console.log(userpassword.value);
   e.preventDefault();
+  if (username.value == "admin" && userpassword.value == "12345678") {
+    window.location.replace("admin.html");
+  } else {
+    console.log(username.value);
+    console.log(userpassword.value);
+  }
 });
