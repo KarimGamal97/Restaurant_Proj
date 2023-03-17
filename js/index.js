@@ -38,7 +38,12 @@ $(document).ready(function () {
     });
   });
 });
-
+let user = document.getElementById("user");
+console.log(user);
+user.addEventListener("click", function () {
+  window.location.replace("login.html");
+});
+console.log("user");
 // Login Page
 $(".message a").click(function () {
   $("form").animate({ height: "toggle", opacity: "toggle" }, "slow");
